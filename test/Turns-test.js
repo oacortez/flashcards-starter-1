@@ -42,4 +42,14 @@ describe('Turn', () => {
   it('Should return false if user guess is incorrect', () => {
     expect(turn.evaluateGuess()).to.be.false;
   });
+
+  it('Should return a string of "Incorrect!" if the user guess is false', () => {
+    expect(turn.giveFeedback()).to.equal('Incorrect!');
+  });
+
+  it('Should return a string of "Correct!" if the user guess is true', () => {
+    const newTurn = new Turn('object', card);
+
+    expect(newTurn.giveFeedback()).to.equal('Correct!');
+  });
 });
