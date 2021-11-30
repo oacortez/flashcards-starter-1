@@ -19,4 +19,13 @@ describe('Turn', () => {
   it('Should be an instance of Turn', () => {
     expect(turn).to.be.a.instanceof(Turn);
   });
+
+  it('Should instantiate with two arguments a guess and a Card', () => {
+    expect(turn.userGuess).to.equal('guess');
+    expect(card).to.be.a.instanceof(Card);
+  });
+
+  it('Should return user guess', () => {
+    expect(turn.returnGuess()).to.equal('guess');
+  });
 });
