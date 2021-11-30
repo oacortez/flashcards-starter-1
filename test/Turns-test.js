@@ -28,4 +28,18 @@ describe('Turn', () => {
   it('Should return user guess', () => {
     expect(turn.returnGuess()).to.equal('guess');
   });
+
+  it('Should return user card', () => {
+    expect(turn.returnCard()).to.equal(card);
+  });
+
+  it('Should return true if user guess is correct', () => {
+    const newTurn = new Turn('object', card);
+
+    expect(newTurn.evaluateGuess()).to.be.true;
+  });
+
+  it('Should return false if user guess is incorrect', () => {
+    expect(turn.evaluateGuess()).to.be.false;
+  });
 });
