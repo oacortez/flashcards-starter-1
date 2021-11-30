@@ -19,6 +19,14 @@ class Turn {
       return false;
     }
   }
+
+  giveFeedback() {
+    if(this.userGuess === this.card.correctAnswer) {
+      return 'Correct!';
+    } else {
+      return 'Incorrect!';
+    }
+  }
 }
 
 module.exports = Turn;
