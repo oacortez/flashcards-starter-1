@@ -1,4 +1,8 @@
-
+class Turn {
+  constructor() {
+    
+  }
+}
 
 
 
