@@ -39,4 +39,13 @@ describe.only('Round', () => {
   it('Should start with no incorrect guesses', () => {
     expect(round.incorrectGuesses.length).to.equal(0);
   });
+
+  it('Should update turns when user makes a guess', () => {
+    round.takeTurn('guess');
+    expect(round.turns).to.equal(1);
+    round.takeTurn('guess');
+    expect(round.turns).to.equal(2);
+    round.takeTurn('guess');
+    expect(round.turns).to.equal(3);
+  });
 });
