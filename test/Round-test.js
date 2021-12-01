@@ -31,4 +31,12 @@ describe.only('Round', () => {
   it('Should return current card being played', () => {
     expect(round.returnCurrentCard()).to.equal(card1);
   });
+
+  it('Should start out with 0 turns', () => {
+    expect(round.turns).to.equal(0);
+  });
+
+  it('Should start with no incorrect guesses', () => {
+    expect(round.incorrectGuesses.length).to.equal(0);
+  });
 });
