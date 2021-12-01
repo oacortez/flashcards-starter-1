@@ -24,11 +24,11 @@ describe.only('Round', () => {
     expect(round).to.be.a.instanceof(Round);
   });
 
-  it('Should have cards to start round', () => {
-    expect(round.deck).to.deep.equal([card1, card2, card3]);
-  });
-
   it('Should start out with first card', () => {
     expect(round.currentCard).to.equal(card1);
+  });
+  
+  it('Should return current card being played', () => {
+    expect(round.returnCurrentCard()).to.equal(card1);
   });
 });
