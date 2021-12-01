@@ -25,4 +25,8 @@ describe('Deck', () => {
   it('Should store cards', () => {
     expect(deck.cards).to.deep.equal([card1, card2, card3]);
   });
+
+  it('Should know how many cards are in deck', () => {
+    expect(deck.countCards()).to.equal(3);
+  });
 });
