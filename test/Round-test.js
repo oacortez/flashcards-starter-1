@@ -5,7 +5,7 @@ const Deck = require('../src/Deck');
 const Card = require('../src/Card');
 const Round = require('../src/Round');
 
-describe('Round', () => {
+describe.only('Round', () => {
 
   let card1, card2, card3, deck, round
   beforeEach(() => {
@@ -14,5 +14,13 @@ describe('Round', () => {
     card3 = new Card(3, 'What type of prototype method directly modifies the existing array?', ['mutator method', 'accessor method', 'iteration method'], 'mutator method');
     deck = new Deck([card1, card2, card3]);
     round = new Round(deck);
+  });
+
+  it('Should be a function', () => {
+    expect(Round).to.be.a('function');
+  });
+
+  it('Should be a instance of Round', () => {
+    expect(round).to.be.a.instanceof(Round);
   });
 });
