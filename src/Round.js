@@ -15,6 +15,9 @@ class Round {
   takeTurn(guess) {
     let turn = new Turn(guess, this.currentCard);
     this.turns++;
+    this.currentCard = this.deck.cards[this.turns];
+    // console.log(this.deck)
+    // Dont understand [this.turns] on line 18
   }
 }
 
