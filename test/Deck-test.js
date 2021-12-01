@@ -3,7 +3,6 @@ const expect = chai.expect;
 
 const Deck = require('../src/Deck');
 const Card = require('../src/Card');
-const Turn = require('../src/Turns');
 
 describe('Deck', () => {
 
@@ -17,5 +16,13 @@ describe('Deck', () => {
 
   it('Should be a function', () => {
     expect(Deck).to.be.a('function');
+  });
+
+  it('Should be a instance of Deck', () => {
+    expect(deck).to.be.a.instanceof(Deck);
+  });
+
+  it('Should store cards', () => {
+    expect(deck.cards).to.deep.equal([card1, card2, card3]);
   });
 });
