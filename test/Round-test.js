@@ -48,4 +48,14 @@ describe.only('Round', () => {
     round.takeTurn('guess');
     expect(round.turns).to.equal(3);
   });
+
+  it('Should update card when user makes a guess', () => {
+    round.takeTurn('guess');
+    expect(round.currentCard).to.equal(card2);
+    round.takeTurn('guess');
+    expect(round.currentCard).to.equal(card3);
+
+
+
+  });
 });
