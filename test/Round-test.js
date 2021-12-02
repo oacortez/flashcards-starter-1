@@ -7,7 +7,11 @@ const Round = require('../src/Round');
 
 describe.only('Round', () => {
 
-  let card1, card2, card3, deck, round
+  let card1;
+  let card2;
+  let card3;
+  let deck;
+  let round;
   beforeEach(() => {
     card1 = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
     card2 = new Card(2, 'What is a comma-separated list of related values?', ['array', 'object', 'function'], 'array');
@@ -99,5 +103,13 @@ describe.only('Round', () => {
     round.takeTurn('guess');
 
     expect(round.calculatePercentCorrect()).to.equal(0);
+  });
+
+  it('Should notify the user when round is over and return a percentage of correct guesses', () => {
+    round.takeTurn('object');
+    round.takeTurn('array');
+    round.takeTurn('mutator method');
+
+    expect(round.endRound()).to.equal(`** Round over! ** You answered 100% of the questions correctly!`);
   });
 });
