@@ -54,8 +54,16 @@ describe.only('Round', () => {
     expect(round.currentCard).to.equal(card2);
     round.takeTurn('guess');
     expect(round.currentCard).to.equal(card3);
+  });
 
-
-
+  it('Should store id to incorrectGuesses if user guesses incorrect answer', () => {
+    const incorrectGuess = 'error';
+    const correctGuess = 'object';
+    
+    expect(round.incorrectGuesses.length).to.equal(0);
+    round.takeTurn(correctGuess);
+    expect(round.incorrectGuesses.length).to.equal(0);
+    round.takeTurn(incorrectGuess)
+    expect(round.incorrectGuesses.length).to.equal(1);
   });
 });
