@@ -21,6 +21,10 @@ class Round {
     this.currentCard = this.deck.cards[this.turns];
     return turn.giveFeedback();
   }
+
+  calculatePercentCorrect() {
+    return Math.round((this.turns - this.incorrectGuesses.length) / this.turns * 100);
+  }
 }
 
 
