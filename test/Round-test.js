@@ -66,4 +66,14 @@ describe.only('Round', () => {
     round.takeTurn(incorrectGuess)
     expect(round.incorrectGuesses.length).to.equal(1);
   });
+
+  it('Should return feedback based if the answer is correct or incorrect', () => {
+    const incorrectGuess = 'error';
+    const correctGuess = 'object';
+    const correctFeedback = 'Correct!';
+    const incorrectFeedback = 'Incorrect!';
+    
+    expect(round.takeTurn(correctGuess)).to.equal(correctFeedback);
+    expect(round.takeTurn(incorrectGuess)).to.equal(incorrectFeedback);
+  });
 });
