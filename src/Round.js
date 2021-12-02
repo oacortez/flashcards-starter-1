@@ -19,8 +19,7 @@ class Round {
       this.incorrectGuesses.push(turn.card.id);
     }
     this.currentCard = this.deck.cards[this.turns];
-    // console.log(this.deck)
-    // Dont understand [this.turns] on line 18
+    return turn.giveFeedback();
   }
 }
 
