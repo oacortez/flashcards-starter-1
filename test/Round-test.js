@@ -72,8 +72,32 @@ describe.only('Round', () => {
     const correctGuess = 'object';
     const correctFeedback = 'Correct!';
     const incorrectFeedback = 'Incorrect!';
-    
+
     expect(round.takeTurn(correctGuess)).to.equal(correctFeedback);
     expect(round.takeTurn(incorrectGuess)).to.equal(incorrectFeedback);
+  });
+
+  it('Should calculate a percentage of all correct guesses', () => {
+    round.takeTurn('object');
+    round.takeTurn('array');
+    round.takeTurn('mutator method');
+
+    expect(round.calculatePercentCorrect()).to.equal(100);
+  });
+
+  it('Should calculate a percentage of correct guesses', () => {
+    round.takeTurn('object');
+    round.takeTurn('guess');
+    round.takeTurn('guess');
+    
+    expect(round.calculatePercentCorrect()).to.equal(33);
+  });
+
+  it('Should calculate a percentage of all incorrect guesses', () => {
+    round.takeTurn('guess');
+    round.takeTurn('guess');
+    round.takeTurn('guess');
+
+    expect(round.calculatePercentCorrect()).to.equal(0);
   });
 });
