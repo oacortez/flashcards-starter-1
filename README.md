@@ -25,7 +25,7 @@
 
 ## Illustrations
 
-Use [https://gifcap.dev/](https://gifcap.dev/) to make GIFs
+![Alt text](test--.gif) / ![](test--.gif)
 
 ## Install + Setup
  - First clone down the repo 
