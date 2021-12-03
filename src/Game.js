@@ -9,6 +9,7 @@ const util = require('./util');
 class Game {
   constructor() {
     this.currentRound = null;
+    this.time = 0;
   }
 
   start() {
@@ -21,6 +22,11 @@ class Game {
 
     this.printMessage(deck, this.currentRound);
     this.printQuestion(this.currentRound);
+    this.currentRound.startTime = this.timer();
+  }
+
+  timer() {
+    return this.time = Date.now();
   }
 
   printMessage(deck, round) {
