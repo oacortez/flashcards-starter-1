@@ -1,79 +1,52 @@
-# FlashCards Starter Kit
+# Title
+FlashCard Project 📇
 
-## Fork This Repo
+## Table of Contents
+  - [Abstract](#abstract)
+  - [Technologies](#technologies)
+  - [Illustrations](#illustrations)
+  - [Install + Setup](#set-up)
+  - [Contributors](#contributors)
+	- [Wins](#wins)
+	- [Challenges + Improvements](#challenges-+-Improvements)
+  - [Project Specs](#project-specs)
 
-On the top right corner of this page, click the **Fork** button.
+## Abstract
+ This project is a simple game where users can quiz their Javascript knowledge with flashcards like style in their command line terminal using node.js. 
 
-## Setup
-
-Clone down the forked repo (from your GitHub). Since you don't want to name your project "flashcards-starter", you can use an optional argument when you run `git clone` (you replace the `[...]` with the terminal command arguments):
-
-```bash
-git clone [remote-address] [what you want to name the repo]
-```
-
-Once you have cloned the repo, change into the directory and install the library dependencies. Run:
-
-```bash
-npm install
-```
-
-To verify that it is setup correctly, run `npm test` in your terminal. You should have 5 pending tests in your `Card` test file that show up.
-
-Running `node index.js` from the root of your project should result in the following message being displayed in your terminal: 
-
-```bash
-Node server running on port 3000
-```
-
-*Note that you will not need to you run your server until you are instantiating your `Game` class in Iteration 3. Prior to that, you should be using TDD to drive your code. You should check the functionality of your application by running your tests via `npm test`.*
+## Technologies
+  - Javascript
+  - eslint
+  - Node.js
+  - VS Code
+	- Mocha
+	- Chai
+	- TDD(Test-Driven-Development)
 
 
-## Where to Add Your Code
+## Illustrations
 
-### JavaScript
+Use [https://gifcap.dev/](https://gifcap.dev/) to make GIFs
 
-**Create all of your feature code files in the `src` directory.**
+## Install + Setup
+ - First clone down the repo 
+ - After cloning down the repo make sure you are in the directory
+ - Once in the directory run `npm install`
+ - After running `npm install` you can finally run the game
+ - To activate game run `node index.js`
+ - To end game and go back to directory run `Control(^) + c`
 
-We will be using the `module.exports` and `require` syntax to share code across files.
+## Contributors
+  - [Oscar Cortez Barrientos](https://github.com/oacortez/flashcards-starter-1)
 
-## How to View Your Code in Action
+## Wins
+	- A win for me was using Mocha and chai as my testing framework and library it was a new technology that I was not familiar with and I got a chance to do a lot of trials and errors witch gains me a lot of experience in the long run for future projects
+	- Successes of this project was actully making the game to function with very few bugs/erros
 
-Once you are working through Iteration 3, you will want to start your server to test your functionality.
-In the terminal, run:
+## Challenges + Improvements
+	- A big challenge for me was to actully connect all my classes to one big class in order to make the game all tie in together
+	- A bug that I encounter is when a user is done answering a question it does not go to the next question the user must hit `enter` in their key-board in order to move on
+	- What I would like to apply in the future would be fixing that bug that I encounter I would like the game to automatically go to the next question instead of the user to click `enter` twice in their key-board
 
-```bash
-node index.js
-```
-
-When the game is functioning appropriately, you will be prompted for each question, have the opportunity to select an answer, and will be given feedback. You will be able to play through the entire deck of cards:
-
-![flash cards example gif](https://media.giphy.com/media/1zkb1q58eTiTH6D7wc/giphy.gif)
-
----
-
-## Test Files Organization
-
-Similar to feature code, your test code needs to be put in a specific place for it to run successfully.
-
-**Put all of your test files in the `test` directory.** As a convention, all test filenames should end with `-test.js`. For instance: `Round-test.js`.
-
-## Running Your Tests
-
-Run your test suite using the command:
-
-```bash
-npm test
-```
-
-The test results will output to the terminal.
-
----
-
-## Linting Your Code
-
-Run the command in your terminal `npm run lint` to run the linter on your JavaScript code. There will be errors and warnings right from the start in this starter kit - the linter is still running successfully.
-
-Your linter will look at the JavaScript files you have within the `src` directory and the `test` directory. 
-
----
+## Project Specs
+  - The project spec & rubric can be found [here](https://frontend.turing.edu/projects/flash-cards.html)
