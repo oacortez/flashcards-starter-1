@@ -3,7 +3,7 @@
 ## Table of Contents
   - [Abstract](#abstract)
   - [Technologies](#technologies)
-  - [Illustrations](#illustrations)
+  - [Illustrations](#Live-Demo)
   - [Install + Setup](#set-up)
   - [Contributors](#contributors)
 	- [Wins](#wins)
@@ -23,7 +23,7 @@
   - TDD(Test-Driven-Development)
 
 
-## Illustrations
+## Live-Demo
 
 ![Alt text](test--.gif)
 
