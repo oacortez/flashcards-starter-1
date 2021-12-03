@@ -25,7 +25,7 @@
 
 ## Illustrations
 
-![Alt text](test--.gif) / ![](test--.gif)
+![Alt text](test--.gif)
 
 ## Install + Setup
  - First clone down the repo 
