@@ -1,5 +1,4 @@
-# Title
-FlashCard Project 📇
+# FlashCard Project 📇
 
 ## Table of Contents
   - [Abstract](#abstract)
